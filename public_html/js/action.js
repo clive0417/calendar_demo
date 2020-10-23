@@ -92,7 +92,7 @@ $(document).ready(function() {
     // if is new -->只要click都是新的
     $('.date-block').dblclick(function(e){
         panel.open(true,e);
-        var id = $(this).data('id');
+
         // AJAX call 取得event detail 
         //load detale to 
         //console.log(e);// addclass 做 XX 加上 class 的動作
@@ -102,6 +102,7 @@ $(document).ready(function() {
         e.stopPropagation();
         //open penal[update]
         panel.open(false,e);
+        var id = $(this).data('id');
 
         panel.selectedEvent =$(e.currentTarget);
         // TODO 
